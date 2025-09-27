@@ -26,7 +26,7 @@ const Services = () => {
       link: "https://elcoders-portfolio-web.vercel.app/",
       color: "bg-primary",
       logo: elcodersLogo,
-      features: ["Full-Stack Development", "Mobile Applications", "Enterprise Solutions", "Cloud Architecture", "DevOps & Deployment", "API Integration"]
+      features: ["Full-Stack Development", "Mobile Applications", "Enterprise Solutions", "AI Development", "Blockchain", "Backend and Frontend Development", "Cloud Architecture", "DevOps & Azure Deployment", "API Integration"]
     },
     {
       id: "elaccess",
