@@ -11,6 +11,8 @@ import {
   Calendar,
   MapPin
 } from "lucide-react";
+import elcodersLogo from "@/assets/elcoders-logo.jpg";
+import myspaceLogo from "@/assets/myspace-logo.jpg";
 
 const Services = () => {
   const services = [
@@ -18,23 +20,24 @@ const Services = () => {
       id: "elcoders",
       icon: Code2,
       title: "ELCODERS",
-      description: "Professional software development company",
-      details: "Expert developers creating high-performance web applications, mobile apps, and enterprise solutions that drive business growth and innovation.",
+      description: "Elite software development powerhouse",
+      details: "Premier team of 32+ expert developers crafting cutting-edge web applications, mobile solutions, and enterprise-grade software that transforms businesses and accelerates digital innovation across Africa.",
       status: "Active",
       link: "https://elcoders-portfolio-web.vercel.app/",
       color: "bg-primary",
-      features: ["Web Development", "Mobile Apps", "Enterprise Solutions", "Cloud Services"]
+      logo: elcodersLogo,
+      features: ["Full-Stack Development", "Mobile Applications", "Enterprise Solutions", "Cloud Architecture", "DevOps & Deployment", "API Integration"]
     },
     {
       id: "elaccess",
       icon: Users,
       title: "EL ACCESS",
-      description: "Society of tech interns and students",
-      details: "A thriving community connecting tech students and interns with mentorship opportunities, resources, and pathway to professional development.",
+      description: "Elite tech talent community",
+      details: "An exclusive society connecting ambitious tech students, interns, and emerging professionals with industry leaders, providing world-class mentorship, resources, and accelerated pathways to tech excellence.",
       status: "Active",
-      link: "#",
+      link: "https://el-accsess-2-registration.netlify.app/",
       color: "bg-accent",
-      features: ["Mentorship Programs", "Networking Events", "Skill Development", "Career Guidance"]
+      features: ["Elite Mentorship", "Industry Networking", "Advanced Skill Development", "Career Acceleration", "Project Collaboration", "Leadership Training"]
     },
     {
       id: "willow",
@@ -51,23 +54,24 @@ const Services = () => {
       id: "myspace",
       icon: Network,
       title: "MYSPACE",
-      description: "Tech talent connection platform",
-      details: "Connect tech professionals and stacks with prospective clients and companies. Streamlined matching for the perfect tech partnerships.",
+      description: "Revolutionary tech talent ecosystem",
+      details: "Next-generation platform revolutionizing how tech professionals connect with enterprises. AI-powered matching, comprehensive skill verification, and seamless project collaboration for the future of tech partnerships.",
       status: "Coming 2026",
       link: "#",
       color: "bg-warning",
-      features: ["Talent Matching", "Project Management", "Client Portal", "Skill Verification"]
+      logo: myspaceLogo,
+      features: ["AI-Powered Matching", "Blockchain Verification", "Enterprise Portal", "Global Talent Pool", "Smart Contracts", "Real-time Collaboration"]
     },
     {
       id: "bitspire",
       icon: GraduationCap,
       title: "BITSPIRE",
-      description: "Premier tech training institute",
-      details: "Comprehensive tech training programs across West Africa, empowering the next generation of technology professionals with cutting-edge skills.",
+      description: "West Africa's premier tech academy",
+      details: "Revolutionary tech education institute transforming careers across West Africa. Industry-aligned curriculum, expert instructors, and guaranteed placement programs creating the next generation of African tech leaders.",
       status: "Launching Oct 2025",
       link: "#",
       color: "bg-destructive",
-      features: ["Coding Bootcamps", "Professional Certifications", "Career Placement", "Industry Partnerships"]
+      features: ["Intensive Bootcamps", "Industry Certifications", "100% Placement Guarantee", "Corporate Partnerships", "Mentorship Programs", "Continuous Learning"]
     }
   ];
 
@@ -81,7 +85,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 tracking-wide">
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Tech Universe</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -97,14 +101,20 @@ const Services = () => {
               <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/50">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-lg ${service.color} text-white`}>
-                      <IconComponent className="w-6 h-6" />
+                    <div className="flex items-center gap-3">
+                      {service.logo ? (
+                        <img src={service.logo} alt={`${service.title} logo`} className="w-12 h-12 rounded-lg object-cover" />
+                      ) : (
+                        <div className={`p-3 rounded-lg ${service.color} text-white`}>
+                          <IconComponent className="w-6 h-6" />
+                        </div>
+                      )}
                     </div>
                     <Badge className={getStatusColor(service.status)}>
                       {service.status}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold font-display tracking-wide">{service.title}</CardTitle>
                   <CardDescription className="text-muted-foreground">
                     {service.description}
                   </CardDescription>
@@ -117,10 +127,11 @@ const Services = () => {
                   
                   <div className="mb-6">
                     <h4 className="font-semibold mb-3 text-foreground">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 gap-2">
                       {service.features.map((feature, index) => (
-                        <div key={index} className="text-xs text-muted-foreground">
-                          • {feature}
+                        <div key={index} className="text-sm text-muted-foreground flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                          {feature}
                         </div>
                       ))}
                     </div>

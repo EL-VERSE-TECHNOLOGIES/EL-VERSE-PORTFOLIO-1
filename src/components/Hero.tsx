@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Users, Rocket, Globe, GraduationCap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import elVerseLogo from "@/assets/el-verse-logo.png";
+import elVerseLogo from "@/assets/el-verse-logo-new.png";
 
 const Hero = () => {
   return (
@@ -16,20 +16,20 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="flex items-center justify-center mb-8">
-          <img src={elVerseLogo} alt="EL VERSE" className="w-20 h-20 mr-4" />
-          <h1 className="text-6xl md:text-8xl font-bold font-brand bg-gradient-primary bg-clip-text text-transparent">
+          <img src={elVerseLogo} alt="EL VERSE" className="w-24 h-24 mr-6" />
+          <h1 className="text-6xl md:text-8xl font-black font-display bg-gradient-primary bg-clip-text text-transparent tracking-wider">
             EL VERSE
           </h1>
         </div>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
-          Welcome to the <span className="text-primary font-semibold">Tech Universe</span> - 
-          Your gateway to comprehensive technology solutions across West Africa
+        <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto font-medium">
+          Welcome to the <span className="text-primary font-bold bg-primary/10 px-2 py-1 rounded-lg">Tech Universe</span> - 
+          Your premier gateway to cutting-edge technology solutions across West Africa
         </p>
         
-        <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-          From software development to tech training, social media innovation to talent connection - 
-          we're building the future of technology in Africa.
+        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          From enterprise software development and tech training to revolutionary social platforms and talent networks - 
+          we're pioneering the future of African technology innovation.
         </p>
         
         {/* CTA Buttons */}
