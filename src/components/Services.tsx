@@ -43,12 +43,12 @@ const Services = () => {
       id: "willow",
       icon: MessageSquare,
       title: "WILLOW",
-      description: "Next-generation social media platform",
-      details: "Revolutionary social media app designed for authentic connections and meaningful interactions. Coming in 2026 with innovative features.",
+      description: "Revolutionary social media platform",
+      details: "The future of authentic social connection. WILLOW redefines social media with privacy-first design, AI-powered content curation, and meaningful community building. Join the revolution that puts users first.",
       status: "Coming 2026",
       link: "#",
       color: "bg-success",
-      features: ["Authentic Connections", "Privacy-First", "AI-Powered", "Community Building"]
+      features: ["Privacy-First Design", "AI Content Curation", "Community Building", "Authentic Connections", "Creator Economy", "Cross-Platform Sync"]
     },
     {
       id: "myspace",
@@ -82,23 +82,31 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 tracking-wide">
+    <section id="services" className="py-24 bg-gradient-to-br from-card via-card/95 to-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(66,153,225,0.1),transparent_50%)]"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-primary"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            Our Tech Ecosystem
+          </div>
+          <h2 className="text-5xl md:text-6xl font-black font-display mb-8 tracking-wide">
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Tech Universe</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Discover our comprehensive ecosystem of technology solutions, 
-            from software development to training, social innovation to talent connection.
+            from enterprise software development to revolutionary social platforms.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
-              <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/50">
+              <Card key={service.id} className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 border-border/50 hover:border-primary/50 bg-card/80 backdrop-blur-sm hover:scale-[1.02]">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -137,20 +145,25 @@ const Services = () => {
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
+                  <div className="flex gap-3">
                     {service.link !== "#" ? (
                       <Button 
-                        variant="outline" 
+                        variant="default" 
                         size="sm" 
-                        className="flex-1"
+                        className="flex-1 bg-gradient-primary hover:opacity-90 text-white font-medium"
                         onClick={() => window.open(service.link, '_blank')}
                       >
-                        Learn More <ExternalLink className="w-4 h-4 ml-2" />
+                        Explore Now <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
                     ) : (
-                      <Button variant="outline" size="sm" className="flex-1" disabled>
-                        {service.status.includes("Coming") ? "Coming Soon" : "Learn More"}
-                      </Button>
+                      <div className="flex gap-2 w-full">
+                        <Button variant="outline" size="sm" className="flex-1 border-primary/50 hover:bg-primary/10" disabled>
+                          {service.status.includes("Coming") ? "Coming Soon" : "Learn More"}
+                        </Button>
+                        <Button size="sm" className="bg-primary/20 hover:bg-primary/30 text-primary border-primary/50">
+                          Notify Me
+                        </Button>
+                      </div>
                     )}
                   </div>
                 </CardContent>
@@ -159,16 +172,37 @@ const Services = () => {
           })}
         </div>
         
+        {/* Enhanced CTA Section */}
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-3xl p-12 border border-primary/20">
+            <h3 className="text-3xl md:text-4xl font-bold font-display mb-6">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Join 100+ satisfied clients who trust EL VERSE for their technology needs. 
+              Let's build something extraordinary together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white font-semibold px-8">
+                Start Your Project
+              </Button>
+              <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 px-8">
+                Schedule Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+        
         {/* Location & Timeline Info */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-6 bg-muted p-6 rounded-lg">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="w-5 h-5" />
-              <span>Benin Republic & Côte d'Ivoire</span>
+          <div className="inline-flex items-center gap-8 bg-muted/50 p-6 rounded-2xl backdrop-blur-sm border border-border/50">
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <MapPin className="w-5 h-5 text-primary" />
+              <span className="font-medium">Benin Republic & Côte d'Ivoire</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Calendar className="w-5 h-5" />
-              <span>Expanding Across West Africa</span>
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <Calendar className="w-5 h-5 text-accent" />
+              <span className="font-medium">Expanding Across West Africa</span>
             </div>
           </div>
         </div>
