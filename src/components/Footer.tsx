@@ -33,10 +33,24 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Our Universe</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">ELCODERS</a>
+                <a
+                  href="https://elcoders-portfolio-web.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  ELCODERS
+                </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">EL ACCESS</a>
+                <a
+                  href="https://el-access-2-registration.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  EL ACCESS
+                </a>
               </li>
               <li>
                 <a href="#" className="hover:text-primary transition-colors">WILLOW (2026)</a>
@@ -65,16 +79,30 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/ElVerse27" className="hover:text-primary transition-colors">
+                <a
+                  href="https://twitter.com/ElVerse27"
+                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Twitter: @ElVerse27
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/el_verse1" className="hover:text-primary transition-colors">
+                <a
+                  href="https://instagram.com/el_verse1"
+                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram: el_verse1
                 </a>
               </li>
             </ul>
+
+            <p className="text-xs text-muted-foreground mt-4">
+              If you need jobs, drop a message through any of our contacts on the Connect Area
+            </p>
           </div>
         </div>
 
