@@ -21,12 +21,12 @@ const Services = () => {
       icon: Code2,
       title: "ELCODERS",
       description: "Elite software development powerhouse",
-      details: "Premier team of 32+ expert developers crafting cutting-edge web applications, mobile solutions, and enterprise-grade software that transforms businesses and accelerates digital innovation across Africa.",
+      details: "Premier team of 64+ expert developers crafting cutting-edge web applications, mobile solutions, and enterprise-grade software that transforms businesses and accelerates digital innovation across Africa.",
       status: "Active",
       link: "https://elcoders-portfolio-web.vercel.app/",
       color: "bg-primary",
       logo: elcodersLogo,
-      features: ["Full-Stack Development", "Mobile Applications", "Enterprise Solutions", "AI Development", "Blockchain", "Backend and Frontend Development", "Cloud Architecture", "DevOps & Azure Deployment", "API Integration"]
+      features: ["Full-Stack Development", "Automations", "Mobile Applications", "Enterprise Solutions", "AI Development", "Blockchain", "Backend and Frontend Development", "Cloud Architecture", "DevOps & Azure Deployment", "API Integration"]
     },
     {
       id: "elaccess",
@@ -48,7 +48,7 @@ const Services = () => {
       status: "Coming Febuary 2026",
       link: "#",
       color: "bg-success",
-      features: ["Privacy-First Design", "AI Content Curation", "Community Building", "Authentic Connections", "Creator Economy", "Cross-Platform Sync"]
+      features: ["Privacy-First Design", "AI Content Curation", "Community Building", "Authentic Connections", "Creator Economy", "Cross-Platform Sync", "Content Earning and Marketplace"]
     },
     {
       id: "myspace",
