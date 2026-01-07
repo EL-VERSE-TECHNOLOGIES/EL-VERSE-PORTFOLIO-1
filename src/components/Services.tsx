@@ -40,12 +40,12 @@ const Services = () => {
       features: ["Elite Mentorship", "Industry Networking", "Advanced Skill Development", "Career Acceleration", "Project Collaboration", "Leadership Training"]
     },
     {
-      id: "willow",
+      id: "nexel",
       icon: MessageSquare,
-      title: "WILLOW",
+      title: "NEXEL",
       description: "Revolutionary social media platform",
-      details: "The future of authentic social connection. WILLOW redefines social media with privacy-first design, AI-powered content curation, and meaningful community building. Join the revolution that puts users first.",
-      status: "Coming 2026",
+      details: "The future of authentic social connection. NEXEL redefines social media with privacy-first design, AI-powered content curation, and meaningful community building. Join the revolution that puts users first.",
+      status: "Coming Febuary 2026",
       link: "#",
       color: "bg-success",
       features: ["Privacy-First Design", "AI Content Curation", "Community Building", "Authentic Connections", "Creator Economy", "Cross-Platform Sync"]
@@ -63,9 +63,9 @@ const Services = () => {
       features: ["AI-Powered Matching", "Blockchain Verification", "Enterprise Portal", "Global Talent Pool", "Smart Contracts", "Real-time Collaboration"]
     },
     {
-      id: "bitspire",
+      id: "elites",
       icon: GraduationCap,
-      title: "BITSPIRE",
+      title: "ELITES",
       description: "West Africa's premier tech academy",
       details: "Revolutionary tech education institute transforming careers across West Africa. Industry-aligned curriculum, expert instructors, and guaranteed placement programs creating the next generation of African tech leaders.",
       status: "Launching Oct 2025",
