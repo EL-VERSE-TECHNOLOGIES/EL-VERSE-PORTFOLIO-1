@@ -130,7 +130,7 @@ const About = () => {
               <div className="bg-warning/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-warning" />
               </div>
-              <h4 className="text-2xl font-bold text-warning mb-2">2+</h4>
+              <h4 className="text-2xl font-bold text-warning mb-2">3+</h4>
               <p className="text-muted-foreground">Countries Served</p>
             </div>
           </div>
