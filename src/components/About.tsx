@@ -114,7 +114,7 @@ const About = () => {
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="text-2xl font-bold text-accent mb-2">32+</h4>
+              <h4 className="text-2xl font-bold text-accent mb-2">64+</h4>
               <p className="text-muted-foreground">Tech Professionals</p>
             </div>
             
