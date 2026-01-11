@@ -45,7 +45,7 @@ const Services = () => {
       title: "NEXEL",
       description: "Revolutionary social media platform",
       details: "The future of authentic social connection. NEXEL redefines social media with privacy-first design, AI-powered content curation, and meaningful community building. Join the revolution that puts users first.",
-      status: "Coming Febuary 2026",
+      status: "Coming February 2026",
       link: "#",
       color: "bg-success",
       features: ["Privacy-First Design", "AI Content Curation", "Community Building", "Authentic Connections", "Creator Economy", "Cross-Platform Sync", "Content Earning and Marketplace"]
