@@ -69,7 +69,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Connect</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="https://wa.me/2348061908715" className="hover:text-primary transition-colors">
+                <a href="https://wa.link/4cwtqf" className="hover:text-primary transition-colors">
                   WhatsApp: +234 806 190 8715
                 </a>
               </li>

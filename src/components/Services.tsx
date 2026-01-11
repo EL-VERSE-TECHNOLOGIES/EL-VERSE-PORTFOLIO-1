@@ -183,10 +183,19 @@ const Services = () => {
               Let's build something extraordinary together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white font-semibold px-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary hover:opacity-90 text-white font-semibold px-8"
+                onClick={() => window.open("https://wa.link/4cwtqf", "_blank")}
+              >
                 Start Your Project
               </Button>
-              <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 px-8">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary/50 hover:bg-primary/10 px-8"
+                onClick={() => window.open("https://wa.link/4cwtqf", "_blank")}
+              >
                 Schedule Consultation
               </Button>
             </div>
