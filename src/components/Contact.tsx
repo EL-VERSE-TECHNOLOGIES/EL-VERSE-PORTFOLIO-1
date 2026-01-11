@@ -21,7 +21,7 @@ const Contact = () => {
       icon: Phone,
       label: "WhatsApp",
       value: "+234 806 190 8715",
-      action: () => window.open("https://wa.me/2348061908715", "_blank"),
+      action: () => window.open("https://wa.link/4cwtqf", "_blank"),
       color: "text-success"
     },
     {
@@ -217,7 +217,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              onClick={() => window.open("https://wa.me/2348061908715", "_blank")}
+              onClick={() => window.open("https://wa.link/4cwtqf", "_blank")}
               className="bg-white text-primary hover:bg-white/90"
             >
               <MessageCircle className="w-5 h-5 mr-2" />

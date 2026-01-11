@@ -50,7 +50,11 @@ const Navigation = () => {
             >
               Contact
             </button>
-            <Button size="sm" className="bg-gradient-primary hover:opacity-90">
+            <Button 
+              size="sm" 
+              className="bg-gradient-primary hover:opacity-90"
+              onClick={() => window.open("https://wa.link/4cwtqf", "_blank")}
+            >
               <Phone className="w-4 h-4 mr-2" />
               Get Quote
             </Button>
@@ -93,7 +97,11 @@ const Navigation = () => {
               >
                 Contact
               </button>
-              <Button size="sm" className="bg-gradient-primary hover:opacity-90 w-fit">
+              <Button 
+                size="sm" 
+                className="bg-gradient-primary hover:opacity-90 w-fit"
+                onClick={() => window.open("https://wa.link/4cwtqf", "_blank")}
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Get Quote
               </Button>
