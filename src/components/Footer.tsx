@@ -2,22 +2,60 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Code2 } from "lucide-react";
 import elVerseLogo from "@/assets/el-verse-logo.png";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Button } from "./ui/button";
+import React from "react";
+import { toast } from "sonner";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const [formState, setFormState] = React.useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setFormState({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message.");
+    }
+  };
 
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="md:col-span-2">
+          <div>
             <div className="flex items-center space-x-3 mb-6">
               <img src={elVerseLogo} alt="EL VERSE" className="w-10 h-10" />
               <span className="text-2xl font-bold font-brand">EL VERSE</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Building the future of African technology through comprehensive solutions, 
+              Building the future of African technology through comprehensive solutions,
               training, and innovation. Your gateway to the tech universe.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -64,7 +102,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Connect */}
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
@@ -99,10 +137,39 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
 
-            <p className="text-xs text-muted-foreground mt-4">
-              If you need jobs, drop a message through any of our contacts on the Connect Area
-            </p>
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold mb-4">In-App Message Request</h4>
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 gap-4">
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formState.name}
+                  onChange={handleInputChange}
+                  required
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formState.email}
+                  onChange={handleInputChange}
+                  required
+                />
+                <Textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formState.message}
+                  onChange={handleInputChange}
+                  required
+                />
+                <Button type="submit">Send Message</Button>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -112,9 +179,9 @@ const Footer = () => {
           <div className="text-sm text-muted-foreground">
             © {currentYear} EL VERSE. All rights reserved. Benin Republic & Côte d'Ivoire.
           </div>
-          
+
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> and 
+            Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> and
             <Code2 className="w-4 h-4 text-primary" /> by ELCODERS, Sub Startup of EL VERSE
           </div>
         </div>
