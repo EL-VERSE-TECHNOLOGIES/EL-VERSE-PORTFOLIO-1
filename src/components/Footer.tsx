@@ -108,7 +108,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <a href="https://wa.link/4cwtqf" className="hover:text-primary transition-colors">
-                  WhatsApp: +234 806 190 8715
+                  WhatsApp(NGN): +234 806 190 8715
                 </a>
               </li>
               <li>
@@ -177,12 +177,12 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} EL VERSE. All rights reserved. Benin Republic & Côte d'Ivoire.
+            © {currentYear} EL VERSE. All rights reserved. Benin Republic, Côte d'Ivoire, EU & Remote.
           </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> and
-            <Code2 className="w-4 h-4 text-primary" /> by ELCODERS, Sub Startup of EL VERSE
+            <Code2 className="w-4 h-4 text-primary" /> by ELCODERS, The Development Arm, Sub Startup of EL VERSE
           </div>
         </div>
       </div>
