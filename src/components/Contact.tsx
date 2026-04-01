@@ -34,7 +34,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Benin Republic & Côte d'Ivoire",
+      value: "Benin Republic, Côte d'Ivoire, EU & Remote",
       action: null,
       color: "text-accent"
     }
