@@ -91,13 +91,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">WILLOW (2026)</a>
+                <a href="#" className="hover:text-primary transition-colors">NEXEL (2026)</a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">MYSPACE (2026)</a>
+                <a href="#" className="hover:text-primary transition-colors">ELSPACE (2026)</a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">BITSPIRE (ACTIVE)</a>
+                <a href="#" className="hover:text-primary transition-colors">ELITES (ACTIVE)</a>
               </li>
             </ul>
           </div>
