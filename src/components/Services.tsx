@@ -207,7 +207,7 @@ const Services = () => {
           <div className="inline-flex items-center gap-8 bg-muted/50 p-6 rounded-2xl backdrop-blur-sm border border-border/50">
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin className="w-5 h-5 text-primary" />
-              <span className="font-medium">Benin Republic & Côte d'Ivoire</span>
+              <span className="font-medium">Benin Republic, Côte d'Ivoire, EU & Remote</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Calendar className="w-5 h-5 text-accent" />
